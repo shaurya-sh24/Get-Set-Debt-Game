@@ -1,0 +1,235 @@
+[gd_scene load_steps=13 format=3 uid="uid://cxb0w0qwugjju"]
+
+[ext_resource type="Script" uid="uid://dxv3clecc2evt" path="res://Scripts/screen.gd" id="1_dw3bs"]
+[ext_resource type="Texture2D" uid="uid://cb2lkocv0kdno" path="res://Assets/screeeen.png" id="1_w8lkc"]
+[ext_resource type="FontFile" uid="uid://bqjrcc8171bse" path="res://Assets/Barlow_Condensed/BarlowCondensed-ExtraBold.ttf" id="2_tvs07"]
+[ext_resource type="FontFile" uid="uid://dcf2xhqd0ygjf" path="res://Assets/Barlow_Condensed/BarlowCondensed-Medium.ttf" id="2_w8lkc"]
+[ext_resource type="FontFile" uid="uid://3unmdvmtgrj2" path="res://Assets/Barlow_Condensed/BarlowCondensed-SemiBold.ttf" id="3_tvs07"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dw3bs"]
+font = ExtResource("2_tvs07")
+font_size = 166
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5ivj"]
+font = ExtResource("2_tvs07")
+font_size = 100
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3hbsd"]
+font = ExtResource("3_tvs07")
+font_size = 181
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 25
+outline_color = Color(0.13725491, 1, 0, 0.4392157)
+
+[sub_resource type="LabelSettings" id="LabelSettings_53dy5"]
+font = ExtResource("2_w8lkc")
+font_size = 150
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 25
+outline_color = Color(0.13725491, 1, 0, 0.4392157)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tvs07"]
+font = ExtResource("2_tvs07")
+font_size = 86
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_atqnd"]
+font = ExtResource("2_tvs07")
+font_size = 86
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qkcdd"]
+font = ExtResource("2_tvs07")
+font_size = 86
+font_color = Color(0.13725491, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dw3bs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_w8lkc")
+
+[node name="Quota" type="Label" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 56.0
+offset_right = 503.0
+offset_bottom = 256.0
+text = "QUOTA: "
+label_settings = SubResource("LabelSettings_dw3bs")
+
+[node name="Interest" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1268.0
+offset_top = 64.0
+offset_right = 1806.0
+offset_bottom = 387.0
+text = "INTEREST: "
+label_settings = SubResource("LabelSettings_c5ivj")
+
+[node name="Chips" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1268.0
+offset_top = 369.0
+offset_right = 1806.0
+offset_bottom = 692.0
+text = "CHIPS: "
+label_settings = SubResource("LabelSettings_c5ivj")
+
+[node name="RoundFee" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1268.0
+offset_top = 704.0
+offset_right = 1832.0
+offset_bottom = 1027.0
+text = "ROUND FEE:"
+label_settings = SubResource("LabelSettings_c5ivj")
+
+[node name="QuotaLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 56.0
+offset_right = 1057.0
+offset_bottom = 256.0
+label_settings = SubResource("LabelSettings_3hbsd")
+
+[node name="InterestLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1268.0
+offset_top = 151.0
+offset_right = 1806.0
+offset_bottom = 474.0
+label_settings = SubResource("LabelSettings_53dy5")
+
+[node name="ChipsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1268.0
+offset_top = 473.0
+offset_right = 1806.0
+offset_bottom = 796.0
+label_settings = SubResource("LabelSettings_53dy5")
+
+[node name="RoundFeeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1268.0
+offset_top = 812.0
+offset_right = 1806.0
+offset_bottom = 1135.0
+label_settings = SubResource("LabelSettings_53dy5")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 322.0
+offset_right = 247.0
+offset_bottom = 426.0
+columns = 4
+
+[node name="Label2" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "     "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "BASE"
+label_settings = SubResource("LabelSettings_tvs07")
+
+[node name="Label2" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "PAIR"
+label_settings = SubResource("LabelSettings_tvs07")
+
+[node name="Label3" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "FLUSH"
+label_settings = SubResource("LabelSettings_tvs07")
+
+[node name="Label4" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "STRAIGHT"
+label_settings = SubResource("LabelSettings_atqnd")
+
+[node name="Label5" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "STRAIGHT FLUSH"
+label_settings = SubResource("LabelSettings_tvs07")
+
+[node name="Label6" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "THREE OF A KIND"
+label_settings = SubResource("LabelSettings_tvs07")
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "                                                                                         "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "x5"
+label_settings = SubResource("LabelSettings_qkcdd")
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "x15"
+label_settings = SubResource("LabelSettings_qkcdd")
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "x25"
+label_settings = SubResource("LabelSettings_qkcdd")
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "x45"
+label_settings = SubResource("LabelSettings_qkcdd")
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "x60"
+label_settings = SubResource("LabelSettings_qkcdd")
+horizontal_alignment = 2
+
+[node name="Label6" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "x100"
+label_settings = SubResource("LabelSettings_qkcdd")
+horizontal_alignment = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 338.0
+offset_right = 567.0
+offset_bottom = 378.0

@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://7a42ol6gc6sl"]
+
+[ext_resource type="Texture2D" uid="uid://8htpk1a2f44b" path="res://Assets/Cards/Blue1 single_0.png" id="1_ucbjc"]
+
+[resource]
+resource_name = "Material.003"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ucbjc")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0

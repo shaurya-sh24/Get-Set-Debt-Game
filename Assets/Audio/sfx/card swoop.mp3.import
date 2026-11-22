@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1rbk3saafbmj"
+path="res://.godot/imported/card swoop.mp3-be53e2b9e1173e31b13041668762c9d4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/sfx/card swoop.mp3"
+dest_files=["res://.godot/imported/card swoop.mp3-be53e2b9e1173e31b13041668762c9d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

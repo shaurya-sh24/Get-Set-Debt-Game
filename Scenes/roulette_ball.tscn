@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs08nbrcbxjd3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iv4m0"]
+albedo_color = Color(0.38960782, 0.12217266, 0.99999994, 1)
+metallic = 1.0
+roughness = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_iv4m0"]
+material = SubResource("StandardMaterial3D_iv4m0")
+radius = 0.015
+height = 0.03
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qbkqw"]
+radius = 0.015
+
+[node name="Roulette Ball" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_iv4m0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_qbkqw")

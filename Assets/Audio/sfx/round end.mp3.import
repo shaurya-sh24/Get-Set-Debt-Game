@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cy51saq30efwy"
+path="res://.godot/imported/round end.mp3-12ba08d96812e01d6fbd92c728e69d27.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/sfx/round end.mp3"
+dest_files=["res://.godot/imported/round end.mp3-12ba08d96812e01d6fbd92c728e69d27.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

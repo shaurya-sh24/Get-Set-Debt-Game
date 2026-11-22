@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://crvfwudqr2rr4"]
+
+[ext_resource type="Texture2D" uid="uid://ent4cdc1tdpt" path="res://Assets/Collectibles/ChameleonPink.png" id="1_x2c1e"]
+
+[resource]
+albedo_texture = ExtResource("1_x2c1e")
+metallic = 0.5
+metallic_specular = 1.0

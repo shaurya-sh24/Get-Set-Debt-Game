@@ -1,0 +1,144 @@
+[gd_scene load_steps=6 format=3 uid="uid://bctv3skn2ok5i"]
+
+[ext_resource type="Script" uid="uid://c8hptval58tqv" path="res://Scripts/roulette_2d.gd" id="1_13usd"]
+[ext_resource type="Script" uid="uid://fs01fiwpn1fl" path="res://Scripts/roulette.gd" id="1_fbxbx"]
+[ext_resource type="Texture2D" uid="uid://cnwp6uriow1yi" path="res://Assets/roulette.png" id="1_q1hjf"]
+[ext_resource type="PackedScene" uid="uid://cj68kg3rd2q1a" path="res://Scenes/ball1.tscn" id="2_ams46"]
+[ext_resource type="PackedScene" uid="uid://ck21kf6rpsduf" path="res://Scenes/ball2.tscn" id="4_8v55t"]
+
+[node name="Roulette2D" type="Node2D"]
+position = Vector2(256, 256)
+scale = Vector2(1.15, 1.15)
+script = ExtResource("1_13usd")
+
+[node name="Roulette" type="StaticBody2D" parent="."]
+script = ExtResource("1_fbxbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Roulette"]
+texture = ExtResource("1_q1hjf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Roulette"]
+polygon = PackedVector2Array(1, -86, 54, -67, 84, -15, 74, 43, 31, 78, -29, 79, -75, 40, -84, -15, -55, -67, 1, -87, 0, -115, -44, -106, -80, -81, -104, -43, -114, 0, -105, 42, -80, 78, -43, 103, -1, 112, 43, 102, 80, 78, 104, 41, 113, -2, 104, -45, 80, -81, 42, -106, 0, -115)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Roulette"]
+polygon = PackedVector2Array(0, -198, 74, -183, 139, -140, 181, -77, 196, -2, 181, 74, 139, 137, 75, 180, 0, 195, -75, 180, -138, 137, -182, 74, -196, -2, -182, -77, -139, -141, -75, -183, 0, -198, 1, -226, -84, -210, -160, -158, -207, -88, -226, 1, -207, 85, -159, 158, -89, 204, -4, 224, 86, 205, 160, 157, 209, 79, 225, -2, 209, -85, 158, -163, 87, -211, 0, -226)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Roulette"]
+polygon = PackedVector2Array(0, -24, 14, -18, 21, -6, 19, 9, 7, 19, -9, 19, -19, 10, -22, -5, -14, -19)
+
+[node name="Ball1" parent="." instance=ExtResource("2_ams46")]
+visible = false
+position = Vector2(-77, -122)
+
+[node name="Ball2" parent="." instance=ExtResource("4_8v55t")]
+visible = false
+position = Vector2(-10, -35)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="NumberPocketMarkers" type="Node2D" parent="."]
+
+[node name="Marker1" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-69, -102)
+metadata/Value = 0
+
+[node name="Marker2" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-23, -118)
+metadata/Value = 2
+
+[node name="Marker3" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(23, -118)
+metadata/Value = 3
+
+[node name="Marker4" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(70, -105)
+metadata/Value = 4
+
+[node name="Marker5" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(104, -66)
+metadata/Value = 5
+
+[node name="Marker6" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(119, -20)
+metadata/Value = 6
+
+[node name="Marker7" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(119, 25)
+metadata/Value = 7
+
+[node name="Marker8" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(103, 64)
+metadata/Value = 8
+
+[node name="Marker9" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(67, 97)
+metadata/Value = 1
+
+[node name="Marker10" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(21, 117)
+metadata/Value = 2
+
+[node name="Marker11" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-24, 118)
+metadata/Value = 3
+
+[node name="Marker12" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-71, 98)
+metadata/Value = 4
+
+[node name="Marker13" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-103, 67)
+metadata/Value = 5
+
+[node name="Marker14" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-125, 23)
+metadata/Value = 6
+
+[node name="Marker15" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-126, -25)
+metadata/Value = 7
+
+[node name="Marker16" type="Marker2D" parent="NumberPocketMarkers"]
+position = Vector2(-106, -72)
+metadata/Value = 8
+
+[node name="ColourPocketMarkers" type="Node2D" parent="."]
+
+[node name="Marker1" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(9, -23)
+
+[node name="Marker2" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(19, -12)
+
+[node name="Marker3" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(21, 3)
+
+[node name="Marker4" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(15, 15)
+
+[node name="Marker5" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(0, 22)
+
+[node name="Marker6" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(-17, 16)
+
+[node name="Marker7" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(-24, 3)
+
+[node name="Marker8" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(-21, -14)
+
+[node name="Marker9" type="Marker2D" parent="ColourPocketMarkers"]
+position = Vector2(-9, -23)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Bets" type="Node2D" parent="."]
+
+[connection signal="roulette_ended" from="Roulette" to="." method="_on_roulette_ended"]
+[connection signal="timeout" from="Timer" to="Roulette" method="_on_timer_timeout"]

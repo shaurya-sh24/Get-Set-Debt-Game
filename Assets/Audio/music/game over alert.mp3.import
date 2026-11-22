@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsfmmxoyi4blp"
+path="res://.godot/imported/game over alert.mp3-b5d415411797ef25b1ca99bac347366a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/music/game over alert.mp3"
+dest_files=["res://.godot/imported/game over alert.mp3-b5d415411797ef25b1ca99bac347366a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

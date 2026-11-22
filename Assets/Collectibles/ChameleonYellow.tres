@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dvoxkqoonc72s"]
+
+[ext_resource type="Texture2D" uid="uid://bbepjxbg3e1q6" path="res://Assets/Collectibles/ChameleonYellow.png" id="1_5nmxi"]
+
+[resource]
+albedo_texture = ExtResource("1_5nmxi")
+metallic = 0.5
+metallic_specular = 1.0

@@ -1,0 +1,191 @@
+[gd_scene load_steps=14 format=3 uid="uid://rjmhaqk44jc8"]
+
+[ext_resource type="VideoStream" uid="uid://dwu5l0ojh2tyi" path="res://Assets/homescreen0001-0120.ogv" id="1_0gua7"]
+[ext_resource type="Script" uid="uid://157bc23n65fa" path="res://Scripts/game_over_screen.gd" id="1_kk8k2"]
+[ext_resource type="FontFile" uid="uid://dh1oswhi4l2yv" path="res://Assets/baby-doll/BabyDoll.ttf" id="2_jb6in"]
+[ext_resource type="FontFile" uid="uid://c6vwrxdcm5l7r" path="res://Assets/Barlow_Condensed/BarlowCondensed-Bold.ttf" id="4_e5yba"]
+[ext_resource type="FontFile" uid="uid://bqjrcc8171bse" path="res://Assets/Barlow_Condensed/BarlowCondensed-ExtraBold.ttf" id="4_ladg1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5yba"]
+bg_color = Color(0, 0, 0, 0.6156863)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_jb6in"]
+Panel/styles/panel = SubResource("StyleBoxFlat_e5yba")
+
+[sub_resource type="LabelSettings" id="LabelSettings_y8man"]
+font = ExtResource("2_jb6in")
+font_size = 100
+font_color = Color(0.8266399, 0.11918316, 7.190734e-05, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_db1cy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8qlv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yufik"]
+
+[sub_resource type="Theme" id="Theme_e5yba"]
+Button/colors/font_color = Color(0.90588236, 0.8627451, 0.08235294, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 80
+Button/fonts/font = ExtResource("4_ladg1")
+Button/styles/hover = SubResource("StyleBoxEmpty_db1cy")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_u8qlv")
+Button/styles/normal = SubResource("StyleBoxEmpty_yufik")
+Button/styles/pressed = SubResource("StyleBoxEmpty_yufik")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ladg1"]
+line_spacing = 0.0
+font = ExtResource("4_e5yba")
+font_size = 40
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kk8k2")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_0gua7")
+autoplay = true
+loop = true
+
+[node name="BlackColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5686275)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -36.0
+offset_right = 52.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+pivot_offset = Vector2(50, 50)
+theme = SubResource("Theme_jb6in")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 112.0
+offset_right = 599.0
+offset_bottom = 284.0
+grow_horizontal = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_y8man")
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 800.0
+offset_right = 1155.0
+offset_bottom = 928.0
+theme = SubResource("Theme_e5yba")
+text = "RETRY"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -308.0
+offset_right = 176.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RoundsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "ROUNDS COMPLETED: "
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "TOTAL SCORE:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="BetsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "BETS HIT:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="BaseLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "BASE:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="PairLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "PAIR: "
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="FlushLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "FLUSH:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="StraightLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "STRAIGHT:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="StraightFlushLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "STRAIGHT FLUSH:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="TrioLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "THREE OF A KIND:"
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="CardsUsedLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "COLLECTIBLES USED: "
+label_settings = SubResource("LabelSettings_ladg1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdxukq30ojgkx"
+path="res://.godot/imported/card select.mp3-00c4445b8195acd489c77b5d0585c8eb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/sfx/card select.mp3"
+dest_files=["res://.godot/imported/card select.mp3-00c4445b8195acd489c77b5d0585c8eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://eq4v418gehkx"]
+
+[ext_resource type="Script" uid="uid://bqdtm2mi37lm3" path="res://Scripts/roulette_interaction.gd" id="1_o6ij0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sxnde"]
+friction = 0.02
+rough = true
+bounce = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a4q2n"]
+size = Vector3(1, 0.3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a4q2n"]
+size = Vector3(1, 0.3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6ij0"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="Roulette" type="StaticBody3D"]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_sxnde")
+script = ExtResource("1_o6ij0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_a4q2n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_a4q2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_o6ij0")

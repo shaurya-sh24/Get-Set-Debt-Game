@@ -1,0 +1,454 @@
+[gd_scene load_steps=27 format=3 uid="uid://bs72ogkvdd7d6"]
+
+[ext_resource type="Script" uid="uid://omq7xv6b4ltd" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="FontFile" uid="uid://c6vwrxdcm5l7r" path="res://Assets/Barlow_Condensed/BarlowCondensed-Bold.ttf" id="2_0rk7u"]
+[ext_resource type="Script" uid="uid://clbho55bhgfep" path="res://Scripts/interactables_raycast.gd" id="2_wr06p"]
+[ext_resource type="Texture2D" uid="uid://dd3lj46nvqd5f" path="res://Assets/cursor.png" id="3_5hfox"]
+[ext_resource type="FontFile" uid="uid://bqjrcc8171bse" path="res://Assets/Barlow_Condensed/BarlowCondensed-ExtraBold.ttf" id="4_h60nn"]
+[ext_resource type="FontFile" uid="uid://b5wan0g65td2q" path="res://Assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf" id="5_ue3g7"]
+[ext_resource type="FontFile" uid="uid://3unmdvmtgrj2" path="res://Assets/Barlow_Condensed/BarlowCondensed-SemiBold.ttf" id="6_2yh8o"]
+[ext_resource type="FontFile" uid="uid://cf4v81fglk71p" path="res://Assets/Barlow_Condensed/BarlowCondensed-BlackItalic.ttf" id="6_h60nn"]
+[ext_resource type="FontFile" uid="uid://dcf2xhqd0ygjf" path="res://Assets/Barlow_Condensed/BarlowCondensed-Medium.ttf" id="7_ujot4"]
+[ext_resource type="FontFile" uid="uid://b0x4u2upp3ena" path="res://Assets/OMORI_GAME2.ttf" id="8_1tksx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
+albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucva2"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="Theme" id="Theme_ujot4"]
+default_font = ExtResource("2_0rk7u")
+default_font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cisnj"]
+bg_color = Color(0, 0, 0, 0.627451)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_top = 29.0
+expand_margin_bottom = 26.0
+
+[sub_resource type="Theme" id="Theme_gxq8o"]
+Panel/styles/panel = SubResource("StyleBoxFlat_cisnj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_f4vau"]
+line_spacing = -22.0
+font = ExtResource("5_ue3g7")
+font_size = 86
+font_color = Color(0, 1, 0.11764706, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ymooi"]
+line_spacing = -22.0
+font = ExtResource("6_2yh8o")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_3o3af"]
+line_spacing = -22.0
+font = ExtResource("6_2yh8o")
+font_size = 57
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jc6e2"]
+
+[sub_resource type="Theme" id="Theme_6s64k"]
+Button/colors/font_color = Color(0.96984607, 0.889832, 0, 1)
+Button/colors/font_pressed_color = Color(0.96862745, 0.8901961, 0, 1)
+Button/font_sizes/font_size = 54
+Button/fonts/font = ExtResource("5_ue3g7")
+Button/styles/disabled = SubResource("StyleBoxEmpty_jc6e2")
+Button/styles/focus = SubResource("StyleBoxEmpty_jc6e2")
+Button/styles/hover = SubResource("StyleBoxEmpty_jc6e2")
+Button/styles/normal = SubResource("StyleBoxEmpty_jc6e2")
+Button/styles/pressed = SubResource("StyleBoxEmpty_jc6e2")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1tksx"]
+font = ExtResource("4_h60nn")
+font_size = 45
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ujot4"]
+font = ExtResource("6_h60nn")
+font_size = 80
+font_color = Color(0.8306921, 0.8282449, 3.85046e-07, 1)
+outline_size = 10
+outline_color = Color(0.83137256, 0.827451, 0, 0.5921569)
+shadow_size = 0
+shadow_color = Color(0, 0.5529412, 0, 0.41568628)
+shadow_offset = Vector2(-0.525, 6.815)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(-3, 3)
+stacked_shadow_0/color = Color(3.429316e-07, 0.25104815, 0.12774059, 1)
+stacked_shadow_0/outline_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_x436g"]
+font = ExtResource("6_h60nn")
+font_size = 80
+font_color = Color(0.8306921, 0.8282449, 3.85046e-07, 1)
+outline_size = 10
+outline_color = Color(0.83137256, 0.827451, 0, 0.5921569)
+shadow_size = 0
+shadow_color = Color(0, 0.5529412, 0, 0.41568628)
+shadow_offset = Vector2(-0.525, 6.815)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(-3, 3)
+stacked_shadow_0/color = Color(3.429316e-07, 0.25104815, 0.12774059, 1)
+stacked_shadow_0/outline_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ths8c"]
+font = ExtResource("7_ujot4")
+font_size = 60
+outline_color = Color(0.11563488, 0.11563488, 0.115634866, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1ipm"]
+font = ExtResource("8_1tksx")
+font_size = 60
+font_color = Color(1, 1, 0, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 0.52156866)
+
+[node name="ProtoController" type="CharacterBody3D"]
+script = ExtResource("1_ucva2")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_iof21")
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_ucva2")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_iof21")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Head/Camera3D"]
+
+[node name="Control" type="Control" parent="Head/Camera3D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ShowdownButton" type="Button" parent="Head/Camera3D/CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = 299.0
+offset_right = 54.0
+offset_bottom = 327.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ujot4")
+text = "SHOWDOWN [F]"
+
+[node name="UseButton" type="Button" parent="Head/Camera3D/CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = 299.0
+offset_right = 54.0
+offset_bottom = 327.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ujot4")
+text = "USE COLLECTIBLE [F]"
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.20371377)
+target_position = Vector3(0, -10, 0)
+collision_mask = 3
+script = ExtResource("2_wr06p")
+
+[node name="Control" type="Control" parent="Head"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RoundStats" type="Control" parent="Head/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -36.0
+offset_right = 52.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.7, 5.7)
+pivot_offset = Vector2(50, 50)
+theme = SubResource("Theme_gxq8o")
+
+[node name="Header" type="Label" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -388.0
+offset_right = 141.0
+offset_bottom = -177.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUOTA
+FULFILLED"
+label_settings = SubResource("LabelSettings_f4vau")
+
+[node name="Header2" type="Label" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = 137.0
+offset_right = 141.0
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "INTEREST EARNED:"
+label_settings = SubResource("LabelSettings_ymooi")
+
+[node name="Header3" type="Label" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = 195.0
+offset_right = 141.0
+offset_bottom = 406.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NEW QUOTA:"
+label_settings = SubResource("LabelSettings_ymooi")
+
+[node name="ScoreLabel" type="Label" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -188.0
+offset_right = 141.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_3o3af")
+
+[node name="InterestEarnedLabel" type="Label" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = 137.0
+offset_right = 236.0
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_ymooi")
+horizontal_alignment = 2
+
+[node name="NewQuotaLabel" type="Label" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = 195.0
+offset_right = 236.0
+offset_bottom = 406.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_ymooi")
+horizontal_alignment = 2
+
+[node name="NextRoundButton" type="Button" parent="Head/Control/RoundStats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = 315.0
+offset_right = 129.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6s64k")
+text = "NEXT ROUND"
+
+[node name="Prompt" type="Label" parent="Head/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = 223.0
+offset_right = 37.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_1tksx")
+
+[node name="TextureRect" type="TextureRect" parent="Head/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(20.045, 19.9)
+texture = ExtResource("3_5hfox")
+
+[node name="ComboLabel" type="Label" parent="Head/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 127.0
+offset_right = 20.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "THREE OF A KIND"
+label_settings = SubResource("LabelSettings_ujot4")
+
+[node name="MultiplierLabel" type="Label" parent="Head/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -399.0
+offset_right = 240.0
+offset_bottom = -303.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "THREE OF A KIND"
+label_settings = SubResource("LabelSettings_x436g")
+
+[node name="RoundLabel" type="Label" parent="Head/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -169.0
+offset_right = 352.0
+offset_bottom = -41.0
+grow_vertical = 0
+text = "ROUND: 1"
+label_settings = SubResource("LabelSettings_ths8c")
+
+[node name="ChipsLabel" type="Label" parent="Head/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -112.0
+offset_right = 268.0
+offset_bottom = 16.0
+grow_vertical = 0
+text = "CHIPS:"
+label_settings = SubResource("LabelSettings_ths8c")
+
+[node name="HelpLabel" type="Label" parent="Head/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -276.0
+offset_top = -246.0
+offset_right = 278.0
+offset_bottom = -186.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_q1ipm")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Head/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.04447286, 0.091957875, 0.009434825, 1)
+
+[connection signal="pressed" from="Head/Camera3D/CanvasLayer/Control/ShowdownButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Head/Camera3D/CanvasLayer/Control/UseButton" to="." method="_on_use_button_pressed"]
+[connection signal="pressed" from="Head/Control/RoundStats/NextRoundButton" to="." method="_on_next_round_button_pressed"]

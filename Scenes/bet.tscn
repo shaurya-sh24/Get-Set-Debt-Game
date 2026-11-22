@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy4121sm8twy6"]
+
+[ext_resource type="Texture2D" uid="uid://dm3qdmhnra0yq" path="res://Assets/bet.png" id="1_wnyiv"]
+[ext_resource type="Script" uid="uid://caov4f1dv6rck" path="res://Scripts/bet.gd" id="2_fn56c"]
+
+[node name="Bet" type="Sprite2D"]
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("1_wnyiv")
+script = ExtResource("2_fn56c")

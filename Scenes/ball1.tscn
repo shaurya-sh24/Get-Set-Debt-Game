@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj68kg3rd2q1a"]
+
+[ext_resource type="Texture2D" uid="uid://b4nkeh0fgdek0" path="res://Assets/roulette_ball.png" id="1_d60mj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ij5cq"]
+
+[node name="Ball1" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.24793488, 0.009071034, 0.37253442, 1)
+position = Vector2(0, 1)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_d60mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ij5cq")

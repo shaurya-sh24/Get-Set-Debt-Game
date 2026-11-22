@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://hpio22s1u8ti"]
+
+[ext_resource type="Texture2D" uid="uid://coqghysv0blb3" path="res://Assets/Collectibles/Ascend.png" id="1_ysx5a"]
+
+[resource]
+albedo_texture = ExtResource("1_ysx5a")
+metallic = 0.5
+metallic_specular = 1.0
